@@ -1,31 +1,7 @@
 # PixelWars
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/tommyettinger/gdx-liftoff).
+A [libGDX](https://libgdx.com/) March 2023 Game Jam Entry for the Pixel Wars theme.
 
-This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
+The idea was to create a ...IO game but just with AI bots (like most of 'm actually are). So a battle royal feeling with paintguns having to paint these "pixels". I started off with this forest as a placeholder and tried thinking of something more fitting of the theme but since time was of essence I never got to changing it. As of now I would love to improve the AI somehwat (doesn't attack the player and doesnt dodge bullets yet). Also some additional power ups or secundary weapons/items would make this game a lot more finished. But I still have to build the thing for GWT, fingers crossed to have some time left.
 
-## Gradle
-
-This project uses [Gradle](http://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
-
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `android:lint`: performs Android project validation.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `html:dist`: compiles GWT sources. The compiled application can be found at `html/build/dist`: you can use any HTTP server to deploy it.
-- `html:superDev`: compiles GWT sources and runs the application in SuperDev mode. It will be available at [localhost:8080/html](http://localhost:8080/html). Use only during development.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
-
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+Scope bit me in the arse halfway trough the week so had to hack in a lot of stuff to get some results.
