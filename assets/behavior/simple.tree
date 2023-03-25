@@ -1,0 +1,32 @@
+import attack:"net.madmenyo.pixelwars.behavior.tasks.AttackTask"
+import wander:"net.madmenyo.pixelwars.behavior.tasks.WanderTask"
+import moveToEnemy:"net.madmenyo.pixelwars.behavior.tasks.MoveToEnemyTask"
+import pickUnownedCP:"net.madmenyo.pixelwars.behavior.tasks.PickUnownedCPTask"
+import moveToTarget:"net.madmenyo.pixelwars.behavior.tasks.MoveToTargetTask"
+import attackCP:"net.madmenyo.pixelwars.behavior.tasks.AttackCPTask"
+
+
+import isEnemyWithinAttackRange?:"net.madmenyo.pixelwars.behavior.conditions.IsEnemyWithinRange"
+import isEnemyNear?:"net.madmenyo.pixelwars.behavior.conditions.IsEnemyNear"
+import isAlive?:"net.madmenyo.pixelwars.behavior.conditions.IsAlive"
+
+subtree name:"noDanger"
+    invert
+        isEnemyNear?
+
+subtree name:"attackEnemy"
+    selector
+        (isEnemyWithinAttackRange?) attack
+        (isEnemyNear?) moveToEnemy
+
+subtree name:"offense"
+    sequence
+        pickUnownedCP
+        moveToTarget
+        attackCP
+
+root
+    dynamicGuardSelector
+        (isAlive?)$offense
+        #####(isEnemyNear?) $attackEnemy
+        (isAlive?) wander
